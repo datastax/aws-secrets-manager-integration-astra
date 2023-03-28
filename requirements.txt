@@ -1,0 +1,3 @@
+aws_secretsmanager_caching==1.1.1.5
+boto3==1.26.97
+botocore==1.29.97
