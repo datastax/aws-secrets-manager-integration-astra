@@ -59,7 +59,7 @@ To install the integration, follow these steps:
 Once the integration is installed and configured, you can use it to manage and rotate your secrets in AWS Secrets Manager. Blah blah blah.
 
 ## Support
-This integration is provided as an open source integration and is primarily community supported. . If you are a Datastax customer with a support contract and you encounter any issues with the integration or have questions about its usage, please contact our support team at support@datastax.com.
+This integration is provided as an open source integration (as is) and is community supported. If you are a Datastax customer with a support contract and you encounter any issues with the integration or have questions about its usage, you may contact our support team. Any assistance through Datastax support for this code is on a best-effort basis.
 
 ## Conclusion
 The DataStax Astra and AWS Secrets Manager Integration provides a secure and automated way to manage and rotate secrets for your DataStax Astra resources. By leveraging the security and scalability of AWS Secrets Manager and the authentication mechanisms of DataStax Astra, this integration helps you protect your sensitive data and streamline your workflows. Try it today and discover how it can enhance your cloud security posture and simplify your secret management processes.
