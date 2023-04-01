@@ -1,0 +1,2 @@
+Datastax Astra Integration for AWS Secrets Manager
+Copyright (c) 2023 Datastax
