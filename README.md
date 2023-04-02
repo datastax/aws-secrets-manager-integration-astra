@@ -11,6 +11,18 @@ The DataStax Astra and AWS Secrets Manager Integration provides the following fe
 * Ease of access to Astra tokens throughout the AWS ecosystem
 * Integration of Astra tokens to the AWS IAM for access control
 
+## Description of Files in this Repository
+
+1. `README.md`: The file containing the information for this README
+
+2. `lambda_function.py`: A Python script that defines an AWS Lambda function that can be used to handle rotation of Astra API tokens in AWS Secrets Manager.
+
+3. `secretsmanager_lib.py`: A Python module that provides helper functions for retrieving secrets from AWS Secrets Manager and parsing the JSON-formatted secret values.
+
+4. `example_new_astra_secret.py`: A Python script that provides an example of how to create a new secret in Astra and store it in AWS Secrets Manager. The script uses the `lambda_function.py`file as a library.
+
+5. `LICENSE`: A text file that specifies the open source license under which the code is distributed.
+
 
 
 ## Creation of the root token

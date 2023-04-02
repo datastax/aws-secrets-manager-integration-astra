@@ -1,2 +1,5 @@
 Datastax Astra Integration for AWS Secrets Manager
-Copyright (c) 2023 Datastax
+Copyright 2023 Datastax. All Rights Reserved.
+
+Derrived from works with the following Copyright
+Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
