@@ -23,7 +23,8 @@ The DataStax Astra and AWS Secrets Manager Integration provides the following fe
 
 5. `LICENSE`: A text file that specifies the open source license under which the code is distributed.
 
-
+## Obtaining the code
+To donwload a copy this repo, clone the GitHub repository using: `git clone https://github.com/datastax/aws-secrets-manager-integration-astra.git`
 
 ## Creation of the root token
 1. [Create a new Astra token](https://docs.datastax.com/en/astra-serverless/docs/manage/org/manage-tokens.html) with sufficient privileges to create tokens with the roles and permissions for any future tokens that it will generate. A token cannot create new tokens with higher permissions than it has.
@@ -43,11 +44,15 @@ Make note of the information provided when the token is create. It will only be 
 } 
 ```
 6. Substitute the values for the information received in step 1. Note that “engine” must remain “AstraDB”.
-7. Whats next??!?!?!?
+7. Chose your encryption key
+8. Click "Next"
+9. On the "Configure Secret" screen give the secret a name that will help you easily identify the purpose of the secret.
+10. Add any tags & permissions necessary to make the secret accessible to your apps
+11. Configure replication if desired.
+12. Click "Next"
+13. On the "Configure rotation" screen, you will not be able to enable rotation of the root secret until you've created the Lambda function. In the last box on the page there is the option to select or create a function. If you create the function from here, a new tab will open allowing you to install a new funcion. Use the steps below to do so, then come back to the tab and complete the creation of the root secret.
 
-## Obtaining the code
-To install copy this rep, follow these steps:
-1. Clone the GitHub repository using: `git clone https://github.com/datastax/aws-secrets-manager-integration-astra.git`
+
 
 ## Installation of the lambda function
 To install the integration, follow these steps:
