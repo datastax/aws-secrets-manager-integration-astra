@@ -11,20 +11,26 @@ The DataStax Astra and AWS Secrets Manager Integration provides the following fe
 * Ease of access to Astra tokens throughout the AWS ecosystem
 * Integration of Astra tokens to the AWS IAM for access control
 
-## Description of Files in this Repository
-
-1. `README.md`: The file containing the information for this README
-
-2. `lambda_function.py`: A Python script that defines an AWS Lambda function that can be used to handle rotation of Astra API tokens in AWS Secrets Manager.
-
-3. `secretsmanager_lib.py`: A Python module that provides helper functions for retrieving secrets from AWS Secrets Manager and parsing the JSON-formatted secret values.
-
-4. `example_new_astra_secret.py`: A Python script that provides an example of how to create a new secret in Astra and store it in AWS Secrets Manager. The script uses the `lambda_function.py`file as a library.
-
-5. `LICENSE`: A text file that specifies the open source license under which the code is distributed.
-
 ## Obtaining the code
 To donwload a copy this repo, clone the GitHub repository using: `git clone https://github.com/datastax/aws-secrets-manager-integration-astra.git`
+
+## Description of Python Files in this Repository
+
+Below is a list of the python files included in this repository. Note that the example files are basic examples and have minial error handling and/or commenting.
+
+1. `example_delete_astra_secret.py`: A Python script that provides an example of how to delete a secret from AWS Secrets Manager along with the associated Astra API token utilizing a root token. The script uses the both the `secretsmanager_lib.py` and `lambda_function.py`files as a libraries.
+
+2. `example_get_astra_secret.py`: A Python script that provides an example of how to retrienve a secret from AWS Secrets Manager utilizing a root token.
+
+3. `example_rotate_astra_secret.py`: A Python script that provides an example of how to attache a rotation policy and rotate a secret in AWS Secrets Manager. The script uses the both the `secretsmanager_lib.py` and `lambda_function.py`files as a libraries.
+
+4. `example_new_astra_secret.py`: A Python script that provides an example of how to create a new secret in Astra and store it in AWS Secrets Manager utilizing a root token. The script uses the both the `secretsmanager_lib.py` and `lambda_function.py`files as a libraries.
+
+5. `lambda_function.py`: A Python script that defines an AWS Lambda function that can be used to handle rotation of Astra API tokens in AWS Secrets Manager utilizing a root token. It is also used as a library by the example files.
+
+6. `launcher.py`: A wrapper to assist with running the `lambda_function.py` outside of the AWS Lambda environment for local debugging
+
+7. `secretsmanager_lib.py`: A Python module that provides helper functions for interacting with AWS Secrets Manager and parsing the JSON-formatted secret values.
 
 ## Creation of the root token
 1. [Create a new Astra token](https://docs.datastax.com/en/astra-serverless/docs/manage/org/manage-tokens.html) with sufficient privileges to create tokens with the roles and permissions for any future tokens that it will generate. A token cannot create new tokens with higher permissions than it has.
@@ -57,18 +63,17 @@ Make note of the information provided when the token is create. It will only be 
 ## Installation of the lambda function
 To install the integration, follow these steps:
 1. Create a [new lambda function](https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html)
- 1. Chose the “Author from scratch” option
- 2. Give the function a name
- 3. Choose “Python 3.9” for the runtime environment
- 4. Chose “x86_64” as an architecture
- 5. Click “Create Function”
+  1. Chose the “Author from scratch” option
+  2. Give the function a name
+  3. Choose “Python 3.9” for the runtime environment
+  4. Chose “x86_64” as an architecture
+  5. Click “Create Function”
 2. Once the function is created you’ll be taken to the function editor.
- 1. Copy the contents of the lambda_function.py from the repository into the code editor for the file of the same name, then deploy the function.
- 2. Test steps necessary?!?!?!
+  1. Copy the contents of the lambda_function.py from the repository into the code editor for the file of the same name, then deploy the function.
 3. Navigate to the “Configuration” tab and select the “Environment variables” subtab
- 1. Add an environment variable for “SECRETS_MANAGER_ENDPOINT” and point it to the secrets manager endpoint in your region (e.g. https://secretsmanager.us-east-1.amazonaws.com/)
+  1. Add an environment variable for “SECRETS_MANAGER_ENDPOINT” and point it to the secrets manager endpoint in your region (e.g. https://secretsmanager.us-east-1.amazonaws.com/)
  2. Save the environment configuration.
-4. Navigate to the “Permissions” subtab
+
 
 
 
