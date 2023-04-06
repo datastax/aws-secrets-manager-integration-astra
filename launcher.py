@@ -7,7 +7,7 @@
 
 from lambda_function import *
 ClientRequestToken = '979cd45d-59e4-44c0-b1ff-dkas93dac2054'
-SecretId = 'arn:aws:secretsmanager:us-east-1:389143091461:secret:/astra/prod/astra-XhB9oF'
+SecretId = 'arn:aws:secretsmanager:us-east-1:123456789012:secret:/astra/prod/astra-XhB9oF'
 Step = 'testSecret'
 
 
