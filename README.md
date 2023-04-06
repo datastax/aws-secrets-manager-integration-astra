@@ -84,7 +84,7 @@ Make note of the information provided when the token is create. It will only be 
 "astraKey": "TOKEN",
 "clientID": "CLEINT_ID",
 "clientSecret": "CLIENT_SECRET",
-"rootarn": ROOT_ARN"
+"rootarn": "ROOT_ARN",
 "engine": "AstraDB"
 } 
 ```
