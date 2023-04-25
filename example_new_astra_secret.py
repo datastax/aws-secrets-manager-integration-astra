@@ -62,7 +62,7 @@ except Exception:
 template = {'astraKey': new_token,
             'clientID': new_clientId,
             'clientSecret': new_secret,
-            'engine': 'AstraDB',
+            'engine': 'Astra',
             'rootarn': root_arn}
 
 jsonTemplate = json.dumps(template)

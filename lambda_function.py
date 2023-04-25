@@ -32,7 +32,7 @@ def lambda_handler(event, context):
         "astraKey": <required: the Astra API key>
         "clientID": <required: the Astra API client ID>
         "clientSecret": <required: the Astra API Client Secret>
-        "engine": <required: must be set to 'AstraDB'>
+        "engine": <required: must be set to 'Astra'>
         "rootarn": <required when not requesting a root ARN: must be set to the ARN which contains the root key>
     }
 
@@ -311,9 +311,9 @@ def get_secret_dict(service_client, arn, stage, token=None, root_secret=False):
         if field not in secret_dict:
             raise KeyError("%s key is missing from secret JSON" % field)
 
-    if secret_dict['engine'] != 'AstraDB':
+    if secret_dict['engine'] != 'Astra':
         raise KeyError(
-            "Database engine must be set to 'AstraDB' in order to use this rotation lambda")
+            "Database engine must be set to 'Astra' in order to use this rotation lambda")
 
     # Parse and return the secret JSON string
     return secret_dict

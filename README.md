@@ -85,12 +85,12 @@ Make note of the information provided when the token is create. It will only be 
 "clientID": "CLEINT_ID",
 "clientSecret": "CLIENT_SECRET",
 "rootarn": "ROOT_ARN",
-"engine": "AstraDB"
+"engine": "Astra"
 } 
 ```
    1. Substitute the astraKey, clientID, & clientSecret  values for the information received in step 1. 
    2. rootarn must be set to the Secret ARN of this secret. This is indicate for future rotations on which secret to use for "root" access.
-   3. The “engine” field remain “AstraDB”.
+   3. The “engine” field remain “Astra”.
 7. Chose your encryption key
 8. Click "Next"
 9. On the "Configure Secret" screen give the secret a name that will help you easily identify the purpose of the secret.
